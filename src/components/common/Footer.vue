@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <router-link to="/page1" tag="div">vue</router-link>
-    <router-link to="/" tag="div">vue-router</router-link>
-    <router-link to="/" tag="div">vuex</router-link>    
+    <router-link to="/" tag="div">vue</router-link>
+    <router-link to="/page1" tag="div">vue-router</router-link>
+    <router-link to="/page2" tag="div">vuex</router-link>    
   </div>
 </template>
 
