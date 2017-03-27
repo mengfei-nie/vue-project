@@ -5,7 +5,7 @@
 <template>
 <div>
   classify
-  <router-link to="/classify/classifyPage" tag="div">跳转到详情页面page1</router-link>
+  <router-link to="/classify/classifyPage1" tag="div">跳转到详情页面page1</router-link>
 </div>
 </template>
 

@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// 路由异步加载
+// const Foo = resolve => require(['./Foo.vue'], resolve)
+// 路由异步分组
+// const Foo = r => require.ensure([], () => r(require('./Foo.vue')), 'group-foo')
 import Home from './components/homePage/Home'
 import Homepage1 from './components/Home_page1'
 
 import Classify from './components/homePage/Classify'
-import Classifypage1 from './components/homePage/Classify_page1'
+import Classifypage1 from './components/Classify_page1'
 
 import Mine from './components/homePage/Mine'
 
@@ -40,12 +44,6 @@ const router = new Router({
 
 // 路由切换
 router.beforeEach((to, from, next) => {
-  console.log(to.path)
-  // 假如在首页，去除动画
-  // switch (to.path) {
-  //   case '/page1':
-
-  // }
   setTimeout(next, 50)
 })
 export default router

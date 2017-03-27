@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header fixed title="Header">
+    <mt-header fixed title="嘟嘟巴士">
       <!-- <router-link to="" @click="back" slot="left"> -->
         <mt-button v-if="isShowBack" @click="back" icon="back" slot="left">返回</mt-button>
       <!-- </router-link> -->

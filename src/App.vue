@@ -31,19 +31,15 @@ export default {
       console.log(toDepth, fromDepth)
       // 假如在首页不使用过渡效果
       if (toDepth === 2) {
-        if (fromDepth < 3) {
-          console.log(1111111)
-          this.name = ''
-          this.is_show_back = false
-        } else {
-          console.log(222222)
-          this.name = ''
-          this.is_show_back = false
+        this.name = ''
+        this.is_show_back = false
+        this.is_show_footer = true
+        if (fromDepth > 3) {
           this.name = 'slideRight'
         }
       } else {
-        console.log(33333333333)
         this.is_show_back = true
+        this.is_show_footer = false
         this.name = toDepth < fromDepth ? 'slideRight' : 'slideLeft'
       }
     }
