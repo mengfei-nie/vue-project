@@ -3,6 +3,7 @@
     <view-box 
     :transitionName="name"
     :isShowBack="is_show_back"
+    :isShowFooter="is_show_footer"
     ></view-box>
   </div>
 </template>
@@ -17,7 +18,8 @@ export default {
   data () {
     return {
       name: '',
-      is_show_back: ''
+      is_show_back: '',
+      is_show_footer: true
     }
   },
   // 接着在父组件内
@@ -26,11 +28,21 @@ export default {
     '$route' (to, from) {
       const toDepth = to.path.split('/').length
       const fromDepth = from.path.split('/').length
+      console.log(toDepth, fromDepth)
       // 假如在首页不使用过渡效果
       if (toDepth === 2) {
-        this.name = ''
-        this.is_show_back = false
+        if (fromDepth < 3) {
+          console.log(1111111)
+          this.name = ''
+          this.is_show_back = false
+        } else {
+          console.log(222222)
+          this.name = ''
+          this.is_show_back = false
+          this.name = 'slideRight'
+        }
       } else {
+        console.log(33333333333)
         this.is_show_back = true
         this.name = toDepth < fromDepth ? 'slideRight' : 'slideLeft'
       }

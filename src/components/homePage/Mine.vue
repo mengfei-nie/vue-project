@@ -1,9 +1,11 @@
+<style type="text/css">
+  
+</style>
+
 <template>
-  <div>aaaaaaaaaa</div>
+  <div>mine</div>
 </template>
 
 <script type="text/javascript">
-  export default {
-    name: 'page1'
-  }
+  
 </script>

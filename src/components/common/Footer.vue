@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <router-link to="/" tag="div">vue</router-link>
-    <router-link to="/page1" tag="div">vue-router</router-link>
-    <router-link to="/page2" tag="div">vuex</router-link>    
+    <router-link to="/" tag="div">首页</router-link>
+    <router-link to="/classify" tag="div">分类</router-link>
+    <router-link to="/mine" tag="div">我的</router-link>    
   </div>
 </template>
 

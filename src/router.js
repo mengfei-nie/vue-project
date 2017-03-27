@@ -1,30 +1,44 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from './components/Hello'
-import Page1 from './components/Page1'
-import Page2 from './components/Page2'
+import Home from './components/homePage/Home'
+import Homepage1 from './components/Home_page1'
 
+import Classify from './components/homePage/Classify'
+import Classifypage1 from './components/homePage/Classify_page1'
+
+import Mine from './components/homePage/Mine'
+
+// 模块化中使用
 Vue.use(Router)
 
+// 定义路由规则
 const router = new Router({
+  hashbang: false,
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      component: Home
     },
     {
-      path: '/page1',
-      name: 'Page1',
-      component: Page1
+      path: '/home/homePage1',
+      component: Homepage1
     },
     {
-      path: '/page2',
-      name: 'Page2',
-      component: Page2
+      path: '/mine',
+      component: Mine
+    },
+    {
+      path: '/classify',
+      component: Classify
+    },
+    {
+      path: '/classify/classifyPage1',
+      component: Classifypage1
     }
   ]
 })
+
+// 路由切换
 router.beforeEach((to, from, next) => {
   console.log(to.path)
   // 假如在首页，去除动画

@@ -1,12 +1,14 @@
 <template>
   <div>
     <mt-header fixed title="Header">
-      <mt-button v-if="isShowBack" icon="back" slot="left"></mt-button>
+      <!-- <router-link to="" @click="back" slot="left"> -->
+        <mt-button v-if="isShowBack" @click="back" icon="back" slot="left">返回</mt-button>
+      <!-- </router-link> -->
     </mt-header>
     <transition :name="transitionName">
       <router-view id="viewBox"></router-view>
     </transition>  
-    <foot></foot>
+    <foot v-if="isShowFooter"></foot>
   </div>
 </template>
 
@@ -27,6 +29,14 @@ export default {
     },
     isShowBack: {
       type: Boolean
+    },
+    isShowFooter: {
+      type: Boolean
+    }
+  },
+  methods: {
+    back: () => {
+      window.history.go(-1)
     }
   }
 }
