@@ -6,6 +6,7 @@ import Router from 'vue-router'
 // const Foo = r => require.ensure([], () => r(require('./Foo.vue')), 'group-foo')
 import Home from './components/homePage/Home'
 import Homepage1 from './components/Home_page1'
+import SideBar from './components/common/SideBar'
 
 import Classify from './components/homePage/Classify'
 import Classifypage1 from './components/Classify_page1'
@@ -21,7 +22,10 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: Home
+      components: {
+        default: Home,
+        sideBar: SideBar
+      }
     },
     {
       path: '/home/homePage1',

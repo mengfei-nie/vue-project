@@ -34,7 +34,7 @@ export default {
         this.name = ''
         this.is_show_back = false
         this.is_show_footer = true
-        if (fromDepth > 3) {
+        if (fromDepth >= 3) {
           this.name = 'slideRight'
         }
       } else {
@@ -52,6 +52,10 @@ export default {
   margin: 0;
   padding: 0;
 }
+html,body {
+  width: 100%;
+  height: 100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -59,6 +63,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   width: 100%;
+  height: 100%;
   /*第三方库样式修改*/
   .mint-header {
     background: #fff;
@@ -67,5 +72,8 @@ export default {
       color: #000;
     }
   }  
+}
+#app>div {
+  height: 100%;
 }
 </style>
