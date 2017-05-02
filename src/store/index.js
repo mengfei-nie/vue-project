@@ -1,11 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as actions from './actions'
-import * as getters from './getters'
-
+import mutations from './mutations.js'
+import actions from './actions.js'
+import moduleA from './modules/moduleA.js'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  state: {
+    count: 1
+  },
+  mutations,
   actions,
-  getters
+  modules: {
+    a: moduleA
+  }
 })

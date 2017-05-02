@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import ViewBox from './components/ViewBox'
 export default {
   name: 'app',
@@ -22,13 +23,21 @@ export default {
       is_show_footer: true
     }
   },
+  created () {
+    this.increment()
+    // console.log(this.$store)
+  },
+  methods: {
+    ...mapActions([
+      'increment'
+    ])
+  },
   // 接着在父组件内
   // watch $route 决定使用哪种过渡
   watch: {
     '$route' (to, from) {
       const toDepth = to.path.split('/').length
       const fromDepth = from.path.split('/').length
-      console.log(toDepth, fromDepth)
       // 假如在首页不使用过渡效果
       if (toDepth === 2) {
         this.name = ''
