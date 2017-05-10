@@ -1,10 +1,13 @@
-<style type="text/css">
-  
+<style type="text/css" lang="scss">
+  // pxToRem 实际像素转rem
+  #page1 {
+    width: pxToRem(200px);
+  }
 </style>
 
 <template>
   <div>
-    <div>我是分类页面page1</div>
+    <div id="page1">我是分类页面page1</div>
     <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
       <ul>
         <li v-for="item in list">{{ item }}</li>

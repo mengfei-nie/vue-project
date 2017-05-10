@@ -57,6 +57,11 @@ export default {
 </script>
 
 <style lang="scss">
+/*
+引入全局的自适应编译函数
+ */
+@import './assets/scss/_function.scss';
+
 *{
   margin: 0;
   padding: 0;

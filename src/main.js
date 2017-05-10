@@ -1,8 +1,9 @@
+import './assets/js/flexible.debug.js'
+import './assets/css/style.css'
 import Vue from 'vue'
 import App from './App'
 import router from './router.js'
 import store from './store'
-import './assets/css/style.css'
 
 /* eslint-disable no-new */
 new Vue({
