@@ -14,3 +14,18 @@ yarn run build / npm run dev
 
 
 ######### vue项目开发模板
+#配置文件说明
+.eslintignore 添加可忽略eslint的文件
+.gitignore 添加可忽略的git提交文件
+
+#config-build
+跨域设置
+proxyTable: {
+  '/index.php': {
+    target: 'http://api.xxxxxxxx.com',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/index.php': '/index.php'
+    }
+  }
+}

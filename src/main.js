@@ -1,3 +1,4 @@
+import './assets/scss/_function.scss'
 import './assets/js/flexible.debug.js'
 import './assets/css/style.css'
 import Vue from 'vue'
